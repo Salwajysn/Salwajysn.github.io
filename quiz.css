@@ -1,0 +1,253 @@
+body {
+    margin: 0;
+    background-color: #dfdfdf;
+    font-family: sans-serif;
+  }
+  
+  header {
+    background-color: #FF833D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    position: sticky;
+    z-index: 2;
+  }
+  
+  #logo_link {
+    display: flex;
+    align-items: center;
+    margin: 0 2%;
+    height: 100%;
+  }
+  
+  #logo {
+    height: 70%;
+    width: auto;
+    cursor: pointer;
+  }
+  
+  header h3 {
+    background-color: #A93C00;
+    color: #FFFFFF;
+    padding: 1% 2%;
+    font-size: 95%;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    left: 0;
+  }
+  
+  .progresWrap {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+  }
+  
+  .progress-container {
+    height: 3vh;
+    width: 13vw;
+    border-radius: 25px;
+    background-color: #F3F3F3;
+    margin-right: 2%;
+  }
+  
+  .progress-bar {
+    background-color: #5C0000;
+    width: 20%;
+    height: 100%;
+    border-radius: 25px;
+  }
+  
+  
+  .progresWrap {
+    font-weight: 600;
+    color: #811700;
+    padding-right: 3%;
+    margin: 0;
+  }
+  
+  .progress-score {
+    font-size: 115%;
+  }
+  
+  .materiSelesai {
+    margin-left: 2%;
+    font-size: 100%;
+  }
+  
+  .profileAdjust {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7%;
+  }
+  
+  .profileAdjust img {
+    width: 3vw;
+    border-radius: 50%;
+    background-color: #f9c899;
+    padding: 3%;
+    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.4);
+  }
+  
+  .profileAdjust p {
+    font-weight: 600;
+    margin-left: 7%;
+    font-size: 135%;
+    color: #5C0000;
+  }
+  /*=====================================================*/
+  main {
+    background-color: #FFFFFF;
+    margin: 1%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    height: 100%;
+  }
+  
+  .titleH1 {
+    font-size: 5vh;
+    color: #FF833D;
+    background-color: #f5f0ec;
+    padding: 2% 4%;
+    border-radius: 0 0 25px 25px;
+  }
+  
+  .titleH2{
+    font-size: 4vh;
+    font-weight: 600;
+    color: #811700;
+    padding: 1% 4%;
+    background-color: #ffdebe;
+  }
+  
+  .kembaliKeMateri {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 4% 3%;
+  }
+  
+  button {
+    background-color: #A93C00;
+    border-radius: 15px;
+    color: #FFFFFF;
+    padding: 1% 2%;
+    border: 0;
+    font-size: 135%;
+    letter-spacing: 1px;
+  }
+  
+  button:hover {
+    background-color: #df7437;
+    cursor: pointer;
+  }
+  /*========================================================*/
+  .class-form-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 21%;
+  }
+  
+  .class-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fae8dd;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    padding: 2% 4% 4% 4%;
+  }
+  
+  .class-form h3 {
+    text-align: left;
+    color: #A93C00;
+    font-size: 135%;
+  }
+  
+  .quizAnswers {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quizAnswers label {
+    cursor: pointer;
+    color: #5C0000;
+    font-size: 3vh;
+    margin-bottom: 2%;
+    font-size: 125%;
+    position: relative;
+  }
+  
+  .quizAnswers label span {
+    margin-right: 2%;
+    border: 1px solid #5C0000;
+    padding: 0.5% 1%;
+    border-radius: 20px;
+  }
+  
+  .quizAnswers input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .quizAnswers input[type="radio"]:checked + span {
+    background-color: #A93C00;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  input[type="submit"] {
+    padding: 1% 2%; 
+    background-color: #A93C00;
+    color: #fff;
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    font-size: 120%;
+    margin: 3% 0 3% 71%;
+  }
+  
+  
+  input[type="submit"]:hover {
+    background-color: #e4661d;
+  }
+  /*=======================================*/
+  #hasilQuiz_KKM {
+    display: none;
+    margin: 5% 21%;
+    text-align: center;
+    background-color: #fae8dd;
+    padding-block: 15%;
+    width: 50%;
+    height: 50%;
+    border-radius: 25px;
+  }
+  
+  #hasilQuiz_KKM h2 {
+    color: #5C0000;
+    padding: 1% 2%;
+    margin: 0 0 2% 0;
+    font-size: 175%;
+    font-weight: 700;
+  }
+  
+  #hasilQuiz_KKM h1 {
+    margin: 0;
+  }
+  
+  #KKM {
+    color: #2cca01;
+  }
+  
+  #tidakKKM {
+    color: #ca0101;
+  }
+  
+  #hasilQuiz_KKM p {
+    font-size: 150%;
+    color: #811700;
+    margin-block: 7%;
+  }

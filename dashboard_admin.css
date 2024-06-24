@@ -1,0 +1,460 @@
+body {
+  margin: 0;
+  background-color: #FFFFFF;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #FF833D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  position: sticky;
+  z-index: 2;
+}
+
+.halaman_admin {
+  font-variant: small-caps;
+  color: #811700;
+}
+
+.halaman_admin:hover {
+  color: #FFFFFF;
+}
+
+#logo_link {
+  display: flex;
+  align-items: center;
+  margin: 0 2%;
+  height: 100%;
+}
+
+#logo {
+  height: 70%;
+  width: auto;
+  cursor: pointer;
+}
+
+#nav_header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  padding-right: 6%;
+}
+
+.circle-container {
+  background-color: #f9c899;
+  border-radius: 50%;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  height: 35%;
+  margin-right: 15%;
+  padding: 10%;
+  cursor: pointer;
+}
+
+.circle-img {
+  height: 100%;
+  width: auto;
+  cursor: pointer;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
+.subMenu-wrap {
+  position: fixed;
+  z-index: 1000;
+  top: 10%;
+  right: 4%;
+  width: 320px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
+
+.subMenu-wrap.open-menu {
+  max-height: 100%;
+}
+
+.subMenu {
+  background-color: #ffffff;
+  padding: 5px 20px 20px 20px;
+  margin: 20px;
+  box-shadow: 5px 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info h2 {
+  font-weight: 500;
+}
+
+.user-info img {
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.subMenu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  margin: 2px 0 10px;
+}
+
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #817979;
+  transition: transform 0.5s;
+}
+
+.sub-menu-link p {
+  width: 100%;
+  font-size: 100%;
+}
+
+.sub-menu-link img {
+  max-width: 8%;
+  margin-right: 7%;
+}
+
+.sub-menu-link:hover {
+  transform: translateX(5px);
+  color: #FF833D;
+}
+
+#logOut {
+  margin-top: 2vh;
+  border-top: 1px solid #A93C00;
+  border-bottom: 1px solid #A93C00;
+}
+
+#logOut img {
+  max-width: 11%;
+}
+
+#logOut p {
+  color: #f9461a;
+}
+/*==========================================================================*/
+main {
+  margin-left: 21%;
+  position: relative;
+  z-index: 0;
+}
+
+
+#navDashboard {
+  box-shadow: 3px 0 2px rgba(0, 0, 0, 0.1);
+  width: 20%;
+  max-height: 100%;
+  background-color: #f9f2f2;
+  padding-block: 10%;
+  overflow-y: hidden;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+.sectionDashboard {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  margin: 0 20% 0 10%;
+  text-decoration: none;
+  transition: transform 0.5s;
+}
+
+.sectionDashboard:hover {
+  transform: translateX(5px);
+  background-color: rgba(255, 131, 61, 0.2);
+  border-radius: 15px;
+}
+
+.iconAdjust {
+  max-height: 32px;
+  padding: 5%;
+}
+
+.navAdjust {
+  color: #817979;
+  font-size: 120%;
+  margin-left: 5%;
+}
+
+.navAdjust:hover {
+  color: #c03105;
+}
+/*=========================================*/
+.content {
+  margin: 2%;
+  display: none;
+  position: absolute;
+  transition: opacity 0.1s ease;
+}
+
+.active {
+  display: block;
+  position: relative;
+}
+
+/*=====================================================*/
+#motivationSquare {
+  background-color: #A93C00;
+  border-radius: 25px;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 2% 3%;
+  color: #FFFFFF;
+}
+
+#haloUser {
+  font-size: 285%;
+}
+
+#teruskanProgresAnda {
+  font-size: 150%;
+}
+
+#innerSquare {
+  background-color: #f6e8e0;
+  border-radius: 15px;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 2% 3%;
+  margin-top: 2%;
+  color: #811700;
+}
+
+.innerSquareFlex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+.titleSubSquareMotivate {
+  font-size: 160%;
+  display: inline;
+}
+
+.iconAdjustInner {
+  font-size: 4vh;
+  display: inline;
+  padding-right: 1vw;
+}
+
+.jumlahMotivateBold {
+  font-size: 6vh;
+  font-weight: bolder;
+  color: #5C0000;
+}
+/*====================================================*/
+#kelasBootcampContent h1, #proyekAkhirContent h1, #feedbackContent h1 {
+  text-align: justify;
+}
+
+#kelasBootcampContent h2, #proyekAkhirContent h2, #feedbackContent h2 {
+  color: #A93C00;
+  margin-top: 6%;
+  font-size: 4vh;
+  font-style: oblique;
+}
+
+.subTitle-kelas {
+  margin-top: 6%;
+  font-size: 5vh;
+  color: #FF833D;
+}
+
+.titleKelas2 {
+  font-size: 150%;
+  color: #811700;
+  display: flex;
+  align-items: center;
+}
+
+.titleKelas3a {
+  font-size: 4vh;
+  color: #A93C00;
+  display: flex;
+  justify-self: flex-start;
+  align-self: center;
+}
+
+.titleKelas3b {
+  font-size: 3vh;
+  color: #811700;
+}
+
+
+#kelasBootcampContent a {
+  text-decoration: none;
+}
+
+.classWrap {
+  border-radius: 15px;
+  border: 1px solid #A93C00;
+  display: grid;
+  grid-template-columns: 15% 60% 25%;
+  padding: 3%;
+  margin-bottom: 2%;
+}
+
+.divideTitleBar {
+  display: grid;
+  grid-template-rows: 30% 30%;
+}
+
+.imgAdjust2 {
+  height: 17vh;
+  object-fit: contain;
+  border: 1px solid #A93C00;
+  border-radius: 15px;
+}
+
+.kelolaKelas, .kelolaKelas-main {
+  border-radius: 10px;
+  background-color: #A93C00;
+  color: #FFFFFF;
+  padding: 0;
+  margin: 10% 0 10% 20%;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+}
+
+
+button:hover {
+  background-color: rgb(228, 101, 27); 
+  cursor: pointer;
+}
+
+.menujuHalamanMenilai-wrap {
+  margin-top: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-block: #FF833D 5px solid;
+  padding-block: 2%;
+  margin-bottom: 5%;
+}
+
+.menujuHalamanMenilai-wrap i {
+  font-size: 5vw;
+  color: #FF833D;
+}
+
+.menujuHalamanMenilai {
+  color: #811700;
+  font-size: 4vh;
+}
+
+.menujuHalamanMenilai-button {
+  border-radius: 10px;
+  background-color: #A93C00;
+  color: #FFFFFF;
+  right: 0;
+  padding: 1% 2%;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+  margin-right: 2%;
+}
+
+.progress-container2 {
+  width: 100%;
+  height: 150%;
+  background-color: #e5e1e1;
+  border-radius: 25px;
+}
+
+.progress-bar2 {
+  width: 20%;
+  height: 100%;
+  background-color: #FF833D;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.percentageBar2 {
+  color: white;
+  font-weight: 800;
+  font-size: small;
+}
+
+.editProyek {
+  border-radius: 10px;
+  background-color: #A93C00;
+  color: #FFFFFF;
+  padding: 1% 2%;
+  margin: 15% 0 15% 20%;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+}
+
+.locked {
+  height: 10%;
+  margin: 0;
+  padding: 0;
+  transform: translate(67vw, 6vh);
+  position: absolute;
+}
+
+/*---------------------------------*/
+
+.feedbackTable {
+  align-items: center;
+  width: 90%;
+  background-color: #ffffff;
+  overflow-y: auto;
+  border-radius: 20px;
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  margin: 0 40px;
+  border-collapse: collapse; /* Tambahkan ini untuk menghilangkan jarak antara border */
+}
+
+.feedbackTable th {
+  width: auto;
+  text-align: center;
+  background-color: #811700;
+  color: #ffffff;
+  padding: 10px;
+  flex: 1;
+}
+
+.feedbackTable th:first-child {
+  border-top-left-radius: 20px; /* Radius sudut kiri atas */
+  border-bottom-left-radius: 20px; /* Radius sudut kiri atas */
+}
+
+.feedbackTable th:last-child {
+  border-top-right-radius: 20px; /* Radius sudut kanan atas */
+  border-bottom-right-radius: 20px; /* Radius sudut kanan atas */
+}
+
+.feedbackTable td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.feedback {
+  background-color: #ece0d1;
+}

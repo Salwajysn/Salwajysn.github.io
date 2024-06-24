@@ -1,0 +1,284 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #FFFFFF;
+  }
+  
+  header {
+    background-color: #FF833D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+  }
+  
+  #logo_link, #logo_linkFooter {
+    display: flex;
+    align-items: center;
+    margin: 0 2%;
+    height: 100%;
+  }
+  
+  #logo {
+    height: 70%;
+    width: auto;
+    cursor: pointer;
+  }
+  
+  .nav_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navLink {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 140%;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-inline: 2vw;
+  }
+  
+  .navLink:hover {
+    color: #811700;
+  }
+  
+  #buttonStyle {
+    margin-right: 6vw;
+  }
+  
+  #masuk_button {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 140%;
+    padding: 10%;
+    background: none;
+    color: #811700;
+    text-decoration: none;
+  }
+  
+  #masuk_button:hover {
+    background-color: #FFFFFF;
+  }
+  
+  .buttonBerwarna {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 140%;
+    padding: 10%;
+    margin-left: 1vw;
+    background-color: #811700;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  .buttonBerwarna:hover {
+    background-color: #A93C00;
+  }
+  
+  .fotoDanTeks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 50px;
+  }
+  
+  #judulFoto {
+    font-family: sans-serif;
+    font-size: 410%;
+    font-weight: bolder;
+    color: #811700;
+    margin-left: 35px;
+  }
+  
+  .techThreeWarna {
+    color: #e65101;
+  }
+  
+  #deskripsi {
+    line-height: 150%;
+    font-family: sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+    margin-left: 35px;
+    color: #5c0000;
+  }
+  
+  #mulaiSekarang {
+    margin-top: 2vw;
+    font-size: 125%;
+    margin-left: 35px;
+    padding: 3%;
+  }
+  
+  #fotoAwal {
+    height: auto;
+    width: 100%;
+    align-self: center;
+  }
+  
+  .fotoDanTeks2-grid {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    background-color: #f9c899;
+    padding-bottom: 4vw;
+  }
+  
+  #mengapaTech3, #telusuriKelas, #caraKelas {
+    color: #811700;
+    text-align: center;
+    padding-block: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 3vw;
+  }
+  
+  .fotoDanTeks2-grid-items,  .fotoDanTeks4-grid-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: sans-serif;
+  }
+  
+  .sectionAlasan {
+    text-align: center;
+    padding-inline: 5vw;
+  }
+  
+  .stylingIcon {
+    width: 8vw;
+  }
+  
+  .subJudulAlasan, .subJudulKelas, .subJudulCara {
+    color: #811700;
+    font-weight: bolder;
+    font-size: 180%;
+    margin-bottom: 3vh;
+  }
+  
+  .deskripsiAlasan, .deskripsiKelas, .deskripsiCara {
+    margin-top: 0;
+    color: #5c0000;
+    line-height: 140%;
+    font-size: 120%;
+  }
+  
+  .deskripsiKelas {
+    font-size: 110%;
+  }
+  
+  .fotoDanTeks3-grid {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    background-color: #FFFFFF;
+    padding-bottom: 4vw;
+    margin-top: 4%;
+  }
+  
+  .fotoDanTeks4-grid {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    padding-bottom: 12%;
+    margin-top: 6%;
+    background-color: #f9c899;
+  }
+  
+  .containerKontenKelas {
+    background-color: #ffa35c;
+    border-radius: 5%;
+    width: 85%;
+    height: auto;
+    margin-inline: 2vw;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -12px 12px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .illustBG {
+    background-color: #FFFFFF;
+    border-radius: 5%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .containerCaraIkut {
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 5%;
+    width: 63%;
+    height: auto;
+    margin-inline: 4vw;
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stylingIllust {
+    max-width: 75%;
+  }
+  
+  .lebihLanjutLink {
+    text-align: right;
+    color: #5c0000;
+    font-weight: bold;
+    margin: 3%;
+  }
+  
+  footer {
+    background-color: #811700;
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+    padding-top: 3%;
+    font-family: sans-serif;
+  }
+  
+  .footer-grid {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  table {
+    text-align: left;
+    width: 22%;
+  }
+  
+  th {
+    padding-bottom: 5%;
+  }
+  
+  #logoFooter {
+    height: auto;
+    width: 55%;
+  }
+  
+  .subAnggota {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 110%;
+    font-style: italic;
+  }
+  
+  #colorBG {
+    margin-top: 35px;
+    background-color: #FF833D;
+    color: #811700;
+    font-size: 110%;
+    padding-block: 3px;
+    font-weight: bold;
+  }

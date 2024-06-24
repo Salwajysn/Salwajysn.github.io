@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    background-color: #dfdfdf;
+    font-family: sans-serif;
+  }
+  
+  header {
+    background-color: #FF833D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    position: sticky;
+    z-index: 2;
+  }
+  
+  #logo_link {
+    display: flex;
+    align-items: center;
+    margin: 0 2%;
+    height: 100%;
+  }
+  
+  #logo {
+    height: 70%;
+    width: auto;
+    cursor: pointer;
+  }
+  
+  header h3 {
+    background-color: #A93C00;
+    color: #FFFFFF;
+    padding: 1% 2%;
+    font-size: 95%;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    left: 0;
+  }
+  
+  .profileAdjust {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7%;
+  }
+  
+  .profileAdjust img {
+    width: 3vw;
+    border-radius: 50%;
+    background-color: #f9c899;
+    padding: 3%;
+    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.4);
+  }
+  
+  .profileAdjust p {
+    font-weight: 600;
+    margin-left: 7%;
+    font-size: 135%;
+    color: #5C0000;
+  }
+  
+  .halaman_admin {
+    font-variant: small-caps;
+    color: #811700;
+  }
+  
+  .halaman_admin:hover {
+    color: #FFFFFF;
+  }
+  
+  /*=======================================*/
+  main {
+    background-color: #FFFFFF;
+    margin: 1%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    height: 100%;
+  }
+  
+  main h1{
+    font-size: 5vh;
+    color: #FF833D;
+    background-color: #f5f0ec;
+    padding: 2% 4%;
+    border-radius: 0 0 25px 25px;
+  }
+  
+  .editable_nama_materi {
+    background-color: #ffdebe;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .editable_nama_materi h2 {
+    font-size: 4vh;
+    font-weight: 600;
+    color: #811700;
+    padding: 0 3% 0 4%;
+  }
+  
+  .editable_nama_materi i {
+    font-size: 5vh;
+    color: #da3e0a;
+  }
+  
+  .editable_nama_materi i:hover, .editable_icon_video i:hover {
+    color: #981e0b;
+    cursor: pointer;
+  }
+  
+  main iframe {
+    margin: 0 4% 5% 4%;
+    width: 89vw;
+    height: 116vh;
+    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.4);
+  }
+  
+  .editable_icon_video {
+    margin-top: 2%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 3% 0 4%;
+  }
+  
+  .editable_icon_video i {
+    font-size: 200%;
+    color: #da3e0a;
+  }
+  
+  .editable_icon_video h2 {
+    font-size: 135%;
+    font-weight: 600;
+    color: #D45F19;
+    padding-right: 2%;
+  }
+  
+  .mulaiQuiz {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5% 4% 5%;
+  }
+  
+  .mulaiQuiz p {
+    color: #a62a0e;
+    font-weight: 600;
+    font-size: 127%;
+    margin-right: 1%;
+  }
+  
+  button {
+    background-color: #A93C00;
+    border-radius: 15px;
+    color: #FFFFFF;
+    padding: 1% 2%;
+    font-size: 135%;
+    letter-spacing: 1px;
+    border: 0;
+  }
+  
+  button:hover {
+    background-color: #df7437;
+    cursor: pointer;
+  }

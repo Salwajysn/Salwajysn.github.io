@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  background-color: #dfdfdf;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #FF833D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  position: sticky;
+  z-index: 2;
+}
+
+#logo_link {
+  display: flex;
+  align-items: center;
+  margin: 0 2%;
+  height: 100%;
+}
+
+#logo {
+  height: 70%;
+  width: auto;
+  cursor: pointer;
+}
+
+header h3 {
+  background-color: #A93C00;
+  color: #FFFFFF;
+  padding: 1% 2%;
+  font-size: 95%;
+  border-radius: 25px;
+  letter-spacing: 1px;
+  left: 0;
+}
+
+.profileAdjust {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 7%;
+}
+
+.profileAdjust img {
+  width: 3vw;
+  border-radius: 50%;
+  background-color: #f9c899;
+  padding: 3%;
+  box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.4);
+}
+
+.profileAdjust p {
+  font-weight: 600;
+  margin-left: 7%;
+  font-size: 135%;
+  color: #5C0000;
+}
+
+.halaman_admin {
+  font-variant: small-caps;
+  color: #811700;
+}
+
+.halaman_admin:hover {
+  color: #FFFFFF;
+}
+/*=====================================================*/
+main {
+  background-color: #FFFFFF;
+  margin: 1%;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  height: 100%;
+}
+
+.titleH1 {
+  font-size: 5vh;
+  color: #FF833D;
+  background-color: #f5f0ec;
+  padding: 2% 4%;
+  border-radius: 0 0 25px 25px;
+}
+
+.titleH2{
+  font-size: 4vh;
+  font-weight: 600;
+  color: #811700;
+  padding: 1% 4%;
+  background-color: #ffdebe;
+}
+
+.editable_nama_materi {
+  background-color: #ffdebe;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.editable_nama_materi h2 {
+  font-size: 4vh;
+  font-weight: 600;
+  color: #811700;
+  padding: 0 3% 0 4%;
+}
+
+.editable_nama_materi i {
+  font-size: 5vh;
+  color: #da3e0a;
+}
+
+.editable_nama_materi i:hover, .editable_icon_video i:hover {
+  color: #981e0b;
+  cursor: pointer;
+}
+
+.kembaliKeMateri {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0 4% 3%;
+  margin-top: 2%;
+}
+
+button {
+  background-color: #A93C00;
+  border-radius: 15px;
+  color: #FFFFFF;
+  padding: 1% 2%;
+  border: 0;
+  font-size: 135%;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #df7437;
+  cursor: pointer;
+}
+
+.delete_all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7e0cb;
+  border-radius: 25px;
+  color: #ca0101;
+  margin: 0 37% 3% 37%;
+  padding: 0 2%;
+}
+
+.delete_all i {
+  padding-left: 10%;
+  font-size: 5vh;
+}
+
+.delete_all i:hover {
+  color: #5a3d06;
+  cursor: pointer;
+}
+/*========================================================*/
+.class-form-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-left: 21%;
+  margin-right: 15%;
+}
+
+.class-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fae8dd;
+  margin-bottom: 5%;
+  border-radius: 5px;
+  padding: 2% 4% 4% 4%;
+  height: 100%;
+  width: 100%;
+}
+
+.class-form h3 {
+  text-align: left;
+  color: #A93C00;
+  font-size: 135%;
+}
+
+.editable_soal_quiz {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.editable_soal_quiz h3,
+.quizAnswers label span {
+  word-break: break-all;
+  white-space: normal;
+}
+
+.tools_edit {
+  margin-inline: 2%;
+  padding-left: 2%;
+  font-size: 5vh;
+  color: #da3e0a;
+}
+
+.tools_edit i {
+  padding-bottom: 50%;
+}
+
+.tools_edit i:hover {
+  color: #981e0b;
+  cursor: pointer;
+}
+
+.quizAnswers {
+  display: flex;
+  flex-direction: column;
+}
+
+.quizAnswers label {
+  color: #5C0000;
+  font-size: 3vh;
+  margin-bottom: 2%;
+  font-size: 125%;
+  position: relative;
+}
+
+.opsi {
+  margin-right: 2%;
+  border: 1px solid #5C0000;
+  padding: 0.5% 1%;
+  border-radius: 20px;
+}
+
+.quizAnswers input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.tambah_soal {
+  padding: 1% 2%; 
+  background-color: #A93C00;
+  color: #fff;
+  border: none;
+  border-radius: 10px; 
+  cursor: pointer;
+  font-size: 120%;
+  margin: 3% 0 3% 60.5%;
+}
+
+.tambah_soal:hover {
+  background-color: #e4661d;
+}
+/*=======================================*/
+
+.kirim {
+  display: flex;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  margin-inline-start: 80%;
+}
+
+#colorBG {
+  margin-top: 35px;
+  background-color: #FF833D;
+  color: #811700;
+  font-size: 110%;
+  padding-block: 3px;
+  font-weight: bold;
+}

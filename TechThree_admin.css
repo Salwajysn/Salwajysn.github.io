@@ -1,0 +1,52 @@
+table {
+    border-collapse: collapse;
+    width: 400px;
+}
+th{ 
+    border: 2px solid #811700;
+    padding: 8px;
+    text-align: center;
+    background-color: #FF833D;
+}
+
+td {
+    border: 1px solid #811700;
+    padding: 8px;
+    text-align: left;
+}
+
+.edit-btn {
+    cursor: pointer;
+    color: blue;
+}
+.edit-btn:hover {
+    color: darkblue;
+} 
+
+#colorBG {
+    background-color: #FF833D;
+    color: #811700;
+    font-size: 110%;
+    padding-block: 3px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    position: relative;
+}
+  
+.div {
+    margin: 20px;
+}
+
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 50px;
+    gap: 100px;
+    max-width: 100%;
+    overflow-x: auto;
+    justify-content: space-between;
+}
