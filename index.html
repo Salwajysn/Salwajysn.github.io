@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salwa Nafisa | Data Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Salwa Nafisa, Informatics graduate focused on data analytics, machine learning, and web deployment." />
+  <meta name="theme-color" content="#0a1628" id="metaTheme" />
+  <!-- Pasang tema tersimpan sebelum halaman tampil, supaya tidak berkedip -->
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo">SN<span>.</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#communities">Communities</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+    <div class="nav__tools">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme" title="Switch theme">
+        <img class="ic sun" src="assets/icons/ui/sun.svg" alt="" />
+        <img class="ic moon" src="assets/icons/ui/moon.svg" alt="" />
+      </button>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__text reveal">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Salwa <span class="grad">Nafisa</span></h1>
+        <p class="hero__role">Aspiring <span id="typed" class="grad"></span><span class="caret">|</span></p>
+        <p class="hero__desc">
+          Informatics graduate from UPN "Veteran" Jakarta with a strong interest in data analytics and machine learning.
+          I build end-to-end projects, from data preprocessing and model evaluation to web deployment.
+        </p>
+        <div class="hero__buttons">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+        </div>
+        <ul class="hero__stats">
+          <li><strong>3.89</strong><span>GPA</span></li>
+          <li><strong>3+</strong><span>Work Experiences</span></li>
+          <li><strong>2</strong><span>Professional Certifications</span></li>
+        </ul>
+      </div>
+
+      <div class="hero__visual reveal">
+        <div class="avatar">
+          <!-- Ganti foto: timpa file assets/foto.jpg dengan foto barumu (nama file sama) -->
+          <img src="assets/foto.jpg" alt="Portrait of Salwa Nafisa" onerror="this.style.display='none'" />
+          <span class="avatar__initials">SN</span>
+        </div>
+        <div class="float-chip chip-1">Python</div>
+        <div class="float-chip chip-2">SQL</div>
+        <div class="float-chip chip-3">Machine Learning</div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="section__head reveal">
+        <p class="eyebrow">01 / About</p>
+        <h2>About Me</h2>
+      </div>
+      <div class="about">
+        <div class="about__text reveal">
+          <p class="about__lead">
+            I love the moment a messy spreadsheet suddenly starts telling a story.
+          </p>
+          <p>
+            That curiosity pulled me into data, and it shaped my four years in Informatics at
+            Universitas Pembangunan Nasional "Veteran" Jakarta (GPA <strong>3.89</strong>, class of 2026).
+            My thesis compares several machine learning models to classify DDoS attacks, and I shipped the
+            result as <strong>SNT-Guard</strong>, a Flask web app anyone can try.
+          </p>
+          <p>
+            Before that, my team and I built <strong>AQMonitoring</strong>, an IoT air quality dashboard that took us to the
+            <strong>semi-finals of Samsung Innovation Campus Batch 5</strong>. I have also handled employee data at the
+            Ministry of Transportation, kept WiFi running at Java Jazz Festival, and written for indozone,
+            which taught me to stay detail-oriented, explain technical things simply, and keep calm when something breaks.
+          </p>
+          <p>
+            I'm now aiming for a <strong>data analyst</strong> or <strong>data scientist</strong> role where I can keep
+            learning fast and turn data into decisions people can actually use.
+          </p>
+        </div>
+        <div class="about__cards">
+          <article class="card spot reveal">
+            <h3>Education</h3>
+            <p class="card__title">UPN "Veteran" Jakarta</p>
+            <p class="muted">B.Sc. Informatics · 2022 to 2026</p>
+            <p class="badge">GPA 3.89</p>
+          </article>
+          <article class="card spot reveal">
+            <h3>Focus</h3>
+            <p class="card__title">Data Analytics &amp; ML</p>
+            <p class="muted">Preprocessing, visualization, model evaluation, deployment</p>
+          </article>
+          <article class="card spot reveal">
+            <h3>English</h3>
+            <p class="card__title">ELPT 497 · Upper Intermediate</p>
+            <p class="muted">UPA Bahasa UPN "Veteran" Jakarta, Feb 2026</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <!--
+      Ikon di dalam tag: <span><img class="ic ic--color" src="assets/icons/python.svg" alt="" />Python</span>
+      Kalau tidak punya ikon, cukup tulis teksnya saja: <span>Teks</span>
+    -->
+    <section class="section" id="skills">
+      <div class="section__head reveal">
+        <p class="eyebrow">02 / Skills</p>
+        <h2>Skills &amp; Tools</h2>
+      </div>
+      <div class="grid grid--3">
+        <article class="card spot reveal">
+          <div class="card__icon"><img class="ic ic--lg" src="assets/icons/ui/chart-column.svg" alt="" /></div>
+          <h3>Data Analytics</h3>
+          <div class="tags">
+            <span>Data Preprocessing</span><span>Data Visualization</span><span>SQL</span>
+            <span><img class="ic ic--color" src="assets/icons/googlesheets.svg" alt="" />Google Sheets</span>
+            <span><img class="ic ic--color" src="assets/icons/excel.svg" alt="" />Microsoft Excel</span>
+            <span><img class="ic ic--color" src="assets/icons/sap.svg" alt="" />SAP Analytics Cloud</span>
+          </div>
+        </article>
+        <article class="card spot reveal">
+          <div class="card__icon"><img class="ic ic--lg" src="assets/icons/ui/brain.svg" alt="" /></div>
+          <h3>Machine Learning</h3>
+          <div class="tags">
+            <span><img class="ic ic--color" src="assets/icons/python.svg" alt="" />Python</span>
+            <span>Classification</span><span>Model Evaluation</span>
+            <span><img class="ic" src="assets/icons/flask.svg" alt="" />Flask Deployment</span>
+          </div>
+        </article>
+        <article class="card spot reveal">
+          <div class="card__icon"><img class="ic ic--lg" src="assets/icons/ui/code-xml.svg" alt="" /></div>
+          <h3>Programming</h3>
+          <div class="tags">
+            <span><img class="ic ic--color" src="assets/icons/python.svg" alt="" />Python</span>
+            <span><img class="ic ic--color" src="assets/icons/cplusplus.svg" alt="" />C++</span>
+            <span><img class="ic ic--color" src="assets/icons/html5.svg" alt="" />HTML</span>
+            <span><img class="ic ic--color" src="assets/icons/css.svg" alt="" />CSS</span>
+            <span><img class="ic ic--color" src="assets/icons/javascript.svg" alt="" />JavaScript</span>
+            <span><img class="ic ic--color" src="assets/icons/mysql.svg" alt="" />MySQL</span>
+            <span>DBMS</span>
+          </div>
+        </article>
+        <article class="card spot reveal">
+          <div class="card__icon"><img class="ic ic--lg" src="assets/icons/ui/wrench.svg" alt="" /></div>
+          <h3>Dev Tools</h3>
+          <div class="tags">
+            <span><img class="ic ic--color" src="assets/icons/vscode.svg" alt="" />VS Code</span>
+            <span><img class="ic ic--color" src="assets/icons/intellijidea.svg" alt="" />IntelliJ IDEA</span>
+            <span><img class="ic ic--color" src="assets/icons/xampp.svg" alt="" />XAMPP</span>
+            <span><img class="ic" src="assets/icons/github.svg" alt="" />GitHub</span>
+            <span><img class="ic ic--color" src="assets/icons/streamlit.svg" alt="" />Streamlit</span>
+          </div>
+        </article>
+        <article class="card spot reveal">
+          <div class="card__icon"><img class="ic ic--lg" src="assets/icons/ui/palette.svg" alt="" /></div>
+          <h3>Design &amp; Office</h3>
+          <div class="tags">
+            <span><img class="ic ic--color" src="assets/icons/canva.svg" alt="" />Canva</span>
+            <span><img class="ic ic--color" src="assets/icons/figma.svg" alt="" />Figma</span>
+            <span><img class="ic ic--color" src="assets/icons/capcut.svg" alt="" />CapCut</span><span><img class="ic ic--color" src="assets/icons/word.svg" alt="" />Word</span><span><img class="ic ic--color" src="assets/icons/powerpoint.svg" alt="" />PowerPoint</span><span><img class="ic ic--color" src="assets/icons/google.svg" alt="" />Google Workspace</span>
+          </div>
+        </article>
+        <article class="card spot reveal">
+          <div class="card__icon"><img class="ic ic--lg" src="assets/icons/ui/users.svg" alt="" /></div>
+          <h3>Soft Skills</h3>
+          <div class="tags">
+            <span>Detail-oriented</span><span>Fast Learner</span><span>Teamwork</span><span>Content Writing</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <!--
+      Preview project: simpan gambar di assets/projects/, rasio 16:10 paling pas.
+      Kalau file gambarnya belum ada, otomatis tampil kotak "Preview coming soon".
+    -->
+    <section class="section" id="projects">
+      <div class="section__head reveal">
+        <p class="eyebrow">03 / Projects</p>
+        <h2>Featured Projects</h2>
+      </div>
+
+      <div class="grid grid--3">
+        <!-- PROJECT 1 -->
+        <article class="card spot project reveal">
+          <div class="proj-thumb">
+            <span class="proj-thumb__ph"><img class="ic" src="assets/icons/ui/image.svg" alt="" />Preview coming soon</span>
+            <!-- Taruh screenshot SNT-Guard di assets/projects/snt-guard.jpg -->
+            <img src="assets/projects/snt-guard.jpg" alt="SNT-Guard web app preview" loading="lazy" onerror="this.remove()" />
+          </div>
+          <span class="project__label">Thesis · Data / ML</span>
+          <h3>SNT-Guard: DDoS Attack Classification</h3>
+          <p>
+            Compared several machine learning models to classify DDoS attacks, covering data preprocessing,
+            model evaluation, and deployment as a Flask web application.
+          </p>
+          <div class="tags">
+            <span><img class="ic ic--color" src="assets/icons/python.svg" alt="" />Python</span>
+            <span>Machine Learning</span>
+            <span><img class="ic" src="assets/icons/flask.svg" alt="" />Flask</span>
+          </div>
+          <div class="project__links">
+            <!-- Ganti # dengan link GitHub / demo kamu -->
+            <a href="#" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="card spot project reveal">
+          <div class="proj-thumb">
+            <span class="proj-thumb__ph"><img class="ic" src="assets/icons/ui/image.svg" alt="" />Preview coming soon</span>
+            <img src="assets/projects/sap-analytics.jpg" alt="SAP Analytics Cloud dashboards and SAP Build Apps barcode scanner" loading="lazy" onerror="this.remove()" />
+          </div>
+          <span class="project__label">Data Analytics</span>
+          <h3>COVID-19 Analysis with SAP Analytics Cloud</h3>
+          <p>
+            Part of the ASEAN Data Science Explorers program: analyzed and forecast COVID-19 data across ASEAN
+            and globally, and built a barcode scanner app with SAP Build Apps to retrieve product information.
+          </p>
+          <div class="tags">
+            <span><img class="ic ic--color" src="assets/icons/sap.svg" alt="" />SAP Analytics Cloud</span>
+            <span>SAP Build Apps</span><span>Forecasting</span>
+          </div>
+        </article>
+
+        <!-- PROJECT 3 -->
+        <article class="card spot project reveal">
+          <div class="proj-thumb">
+            <span class="proj-thumb__ph"><img class="ic" src="assets/icons/ui/image.svg" alt="" />Preview coming soon</span>
+            <!-- Screenshot dashboard AQMonitoring (gabungan 2 halaman) -->
+            <img src="assets/projects/aqmonitoring.jpg" alt="AQMonitoring Streamlit dashboard: home page and World Air Quality Monitor" loading="lazy" onerror="this.remove()" />
+          </div>
+          <span class="project__label">Data · IoT</span>
+          <h3>AQMonitoring: Air Quality Monitoring</h3>
+          <p>
+            A Streamlit dashboard that monitors air quality by country and classifies pollutant readings (PM1, PM2.5, PM10, O3) as healthy or moderate.
+            Built with my team for Samsung Innovation Campus Batch 5, where we became semi-finalists (2023/2024).
+          </p>
+          <div class="tags">
+            <span><img class="ic ic--color" src="assets/icons/python.svg" alt="" />Python</span>
+            <span><img class="ic ic--color" src="assets/icons/streamlit.svg" alt="" />Streamlit</span><span>IoT</span><span>ESP32</span>
+          </div>
+          <div class="project__links">
+            <a href="https://dashboard-air-quality-monitor-sic-21.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+            <a href="https://github.com/Kahfii/AQMonitoring" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
+        <!-- PROJECT 4 -->
+        <article class="card spot project reveal">
+          <div class="proj-thumb">
+            <span class="proj-thumb__ph"><img class="ic" src="assets/icons/ui/image.svg" alt="" />Preview coming soon</span>
+            <img src="assets/projects/triple-des.jpg" alt="Triple DES Encrypt-Decrypt Streamlit app home page" loading="lazy" onerror="this.remove()" />
+          </div>
+          <span class="project__label">Web App · Security</span>
+          <h3>Triple DES Encrypt-Decrypt</h3>
+          <p>
+            A Streamlit app where users enter text and keys, choose EEE or EDE mode, and get the encrypted or
+            decrypted result directly in the browser.
+          </p>
+          <div class="tags">
+            <span><img class="ic ic--color" src="assets/icons/python.svg" alt="" />Python</span>
+            <span><img class="ic ic--color" src="assets/icons/streamlit.svg" alt="" />Streamlit</span>
+            <span>Cryptography</span>
+          </div>
+          <div class="project__links">
+            <a href="https://kripto-tripledes-3des-k2.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+            <a href="https://github.com/Salwajysn/Kriptografi-Triple-DES-enkrip-dekrip" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
+        <!-- PROJECT 5 -->
+        <article class="card spot project reveal">
+          <div class="proj-thumb">
+            <span class="proj-thumb__ph"><img class="ic" src="assets/icons/ui/image.svg" alt="" />Preview coming soon</span>
+            <img src="assets/projects/codecademy.jpg" alt="Collage of the blog, burger order, animal and form pages" loading="lazy" onerror="this.remove()" />
+          </div>
+          <span class="project__label">Web Development</span>
+          <h3>Website Learning with Codecademy</h3>
+          <p>
+            A series of website interfaces: a blog, a food ordering menu, an informative animal page, and a form
+            submission site, built with HTML, CSS, and JavaScript.
+          </p>
+          <div class="tags">
+            <span><img class="ic ic--color" src="assets/icons/html5.svg" alt="" />HTML</span>
+            <span><img class="ic ic--color" src="assets/icons/css.svg" alt="" />CSS</span>
+            <span><img class="ic ic--color" src="assets/icons/javascript.svg" alt="" />JavaScript</span>
+          </div>
+          <div class="project__links">
+            <a href="https://github.com/Salwajysn/Codecademy-Learning" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
+        <!-- TAMBAH PROJECT BARU: copy satu blok <article> di atas, paste di sini, lalu ubah isinya -->
+        <article class="card project project--empty reveal">
+          <h3>More coming soon</h3>
+          <p>New data analysis projects will be added here.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <!--
+      Foto kegiatan: tiap tombol class="photo" bisa diklik untuk memperbesar.
+      Simpan gambar di assets/exp/ lalu ganti nama file dan data-title.
+    -->
+    <section class="section" id="experience">
+      <div class="section__head reveal">
+        <p class="eyebrow">04 / Experience</p>
+        <h2>Experience</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline__item card spot reveal">
+          <div class="tl">
+            <div class="tl__text">
+              <span class="timeline__date">May 2025 to Jun 2025</span>
+              <h3>Technical Support Volunteer (IT &amp; Access Control)</h3>
+              <p class="muted">Java Jazz Festival 2025 · Jakarta</p>
+              <ul>
+                <li>Supported network setup and operation: access point, LAN cable, and device rack checks.</li>
+                <li>Configured and troubleshot devices, and helped run access control and communication systems.</li>
+                <li>Tested WiFi quality at every booth and monitored daily, following up on technical issues.</li>
+              </ul>
+            </div>
+            <div class="tl__photos">
+              <button class="photo" data-full="assets/exp/javajazz.jpg" data-title="Volunteer team, Java Jazz Festival 2025" aria-label="View photo">
+                <img src="assets/exp/javajazz.jpg" alt="Volunteer team photo at Java Jazz Festival 2025" loading="lazy" />
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline__item card spot reveal">
+          <div class="tl">
+            <div class="tl__text">
+              <span class="timeline__date">Sep 2024 to Jan 2025</span>
+              <h3>IT Data Administration</h3>
+              <p class="muted">Ministry of Transportation of the Republic of Indonesia · Jakarta</p>
+              <ul>
+                <li>Managed employee master data with Microsoft Excel and internal web systems (SIAU and SIAU Keuangan).</li>
+                <li>Prepared monthly employee data reports per work unit and kept data accurate across systems.</li>
+                <li>Handled system access rights for new and inactive employees.</li>
+              </ul>
+            </div>
+            <div class="tl__photos">
+              <button class="photo" data-full="assets/exp/kemenhub.jpg" data-title="With the team at the Ministry of Transportation" aria-label="View photo">
+                <img src="assets/exp/kemenhub.jpg" alt="Team photo at the Ministry of Transportation office" loading="lazy" />
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline__item card spot reveal">
+          <div class="tl">
+            <div class="tl__text">
+              <span class="timeline__date">Mar 2024 to Jan 2025</span>
+              <h3>Creative Economy Staff</h3>
+              <p class="muted">Himpunan Mahasiswa Informatika (HIMA) UPNVJ · Jakarta</p>
+              <ul>
+                <li>Enhanced creativity and innovation in digital economy development within the Informatics student association.</li>
+                <li>Focused on project management, industry trend analysis, and digital marketing strategies.</li>
+                <li>Supported the growth of the campus tech community through events and programs.</li>
+              </ul>
+            </div>
+            <div class="tl__photos">
+              <button class="photo" data-full="assets/exp/hima-1.jpg" data-title="HIMA Informatika UPNVJ team" aria-label="View photo">
+                <img src="assets/exp/hima-1.jpg" alt="HIMA Informatika UPNVJ team group photo" loading="lazy" />
+              </button>
+              <button class="photo" data-full="assets/exp/hima-2.jpg" data-title="HIMA Informatika UPNVJ activity" aria-label="View photo">
+                <img src="assets/exp/hima-2.jpg" alt="HIMA Informatika UPNVJ members posing together" loading="lazy" />
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline__item card spot reveal">
+          <div class="tl">
+            <div class="tl__text">
+              <span class="timeline__date">Jul 2024 to Sep 2024</span>
+              <h3>Content Writer (Z Creators)</h3>
+              <p class="muted">indozone · Jakarta</p>
+              <ul>
+                <li>Wrote original articles and content for websites, blogs, and social media.</li>
+                <li>Built content strategies aligned with marketing goals and target audiences.</li>
+              </ul>
+            </div>
+            <div class="tl__photos">
+              <button class="photo photo--left" data-full="assets/exp/indozone.jpg" data-title="Z Creators writer profile on indozone.id" aria-label="View screenshot">
+                <img src="assets/exp/indozone.jpg" alt="Z Creators writer profile page on indozone" loading="lazy" />
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline__item card spot reveal">
+          <div class="tl">
+            <div class="tl__text">
+              <span class="timeline__date">Mar 2024 to Aug 2024</span>
+              <h3>Student Trainee, AI &amp; IoT Product Development</h3>
+              <p class="muted">Samsung Innovation Campus Batch 5 · Samsung Electronics Indonesia x Skilvul</p>
+              <ul>
+                <li>Completed a three-stage program covering Python programming, Internet of Things (IoT), and Artificial Intelligence (AI).</li>
+                <li>Worked hands-on with ESP32, machine learning for IoT, computer vision, deep learning, and Streamlit.</li>
+                <li>Developed "AQMonitoring", a web-based air quality monitoring app using sensors, as a team project.</li>
+                <li>Practiced designing IoT systems, integrating hardware and software, teamwork, and time management.</li>
+              </ul>
+              <div class="tags">
+                <span><img class="ic ic--color" src="assets/icons/python.svg" alt="" />Python</span>
+                <span>IoT</span><span>ESP32</span><span>AI</span>
+                <span><img class="ic ic--color" src="assets/icons/streamlit.svg" alt="" />Streamlit</span>
+              </div>
+            </div>
+            <div class="tl__photos">
+              <button class="photo" data-full="assets/exp/sic-1.jpg" data-title="Samsung Innovation Campus Batch 5 team" aria-label="View photo">
+                <img src="assets/exp/sic-1.jpg" alt="Team photo with laptops and IoT kits at Samsung Innovation Campus" loading="lazy" />
+              </button>
+              <button class="photo" data-full="assets/exp/sic-2.jpg" data-title="Working on IoT sensor kits together" aria-label="View photo">
+                <img src="assets/exp/sic-2.jpg" alt="Team working together on IoT kits and laptops" loading="lazy" />
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ COMMUNITIES ============ -->
+    <!--
+      Isi komunitas: Pemimpin.id dan Young On Top masih singkat.
+      Tambahkan peran, periode, dan kegiatannya di <p class="muted"> / <p class="com__text">.
+    -->
+    <section class="section" id="communities">
+      <div class="section__head reveal">
+        <p class="eyebrow">05 / Communities</p>
+        <h2>Communities</h2>
+      </div>
+      <div class="grid grid--3">
+        <article class="card spot reveal">
+          <div class="card__icon"><img class="ic ic--lg" src="assets/icons/ui/users.svg" alt="" /></div>
+          <span class="timeline__date">Feb 2024 to Dec 2024</span>
+          <h3>Novo Club by ParagonCorp</h3>
+          <p class="muted">Member (ParaNovo)</p>
+          <p class="com__text">
+            A free national student community by ParagonCorp that bridges campus and the professional world.
+            I joined to sharpen my leadership, soft skills, and teamwork through innovation and collaboration.
+          </p>
+        </article>
+        <article class="card spot reveal">
+          <div class="card__icon"><img class="ic ic--lg" src="assets/icons/ui/users.svg" alt="" /></div>
+          <h3>Pemimpin.id Community</h3>
+          <p class="muted">Community member</p>
+          <p class="com__text">
+            A network of young leaders across regions who learn together and plan real social-impact actions.
+            I'm part of it to grow my leadership and collaborate beyond my campus.
+          </p>
+        </article>
+        <article class="card spot reveal">
+          <div class="card__icon"><img class="ic ic--lg" src="assets/icons/ui/users.svg" alt="" /></div>
+          <h3>Young On Top</h3>
+          <p class="muted">Community member · Green &amp; Social pillars</p>
+          <p class="com__text">
+            One of Indonesia's largest youth communities, built on #LearnAndShare.
+            I joined the Green and Social pillars to take part in environmental and community-impact activities.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATES ============ -->
+    <section class="section" id="certificates">
+      <div class="section__head reveal">
+        <p class="eyebrow">06 / Certificates</p>
+        <h2>Certifications &amp; Achievements</h2>
+      </div>
+
+      <!-- ---------- A. PROFESSIONAL CERTIFICATIONS (BNSP + Certiport) ---------- -->
+      <h3 class="subhead reveal">Professional Certifications</h3>
+      <div class="pro-list">
+
+        <article class="card spot pro reveal">
+          <button class="cert-thumb cert-thumb--contain" data-full="assets/certs/bnsp.jpg" data-title="BNSP: Junior / Associate Data Scientist" aria-label="View BNSP certificate">
+            <img src="assets/certs/bnsp.jpg" alt="BNSP certificate of competence, Junior / Associate Data Scientist" loading="lazy" />
+            <span class="cert-thumb__zoom">View</span>
+          </button>
+          <div class="pro__body">
+            <span class="badge">BNSP</span>
+            <h3>Junior / Associate Data Scientist</h3>
+            <p class="muted">Certificate of Competence · Indonesian Professional Certification Authority (BNSP), via LSP UPN "Veteran" Jakarta</p>
+            <p class="pro__meta"><strong>Issued</strong> 24 Feb 2026 &nbsp;·&nbsp; <strong>Valid</strong> 3 years</p>
+            <p class="pro__label">9 competency units</p>
+            <div class="tags">
+              <span>Collecting Data</span><span>Examining Data</span><span>Validating Data</span>
+              <span>Defining Data Objects</span><span>Cleaning Data</span><span>Constructing Data</span>
+              <span>Labelling Data</span><span>Building Models</span><span>Evaluating Modeling Results</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card spot pro reveal">
+          <button class="cert-thumb cert-thumb--contain" data-full="assets/certs/certiport.jpg" data-title="Certiport: IT Specialist, Data Analytics" aria-label="View Certiport certificate">
+            <img src="assets/certs/certiport.jpg" alt="Certiport IT Specialist certificate, Data Analytics" loading="lazy" />
+            <span class="cert-thumb__zoom">View</span>
+          </button>
+          <div class="pro__body">
+            <span class="badge">Certiport · Pearson VUE</span>
+            <h3>IT Specialist: Data Analytics</h3>
+            <p class="muted">Industry certification by Certiport, a Pearson VUE business</p>
+            <p class="pro__meta"><strong>Awarded</strong> 20 Dec 2024 &nbsp;·&nbsp; <strong>Score</strong> 841 / 1000 (passing 700)</p>
+            <p class="pro__label">Verification</p>
+            <p class="muted">Verify at verify.certiport.com with code <code>uuHA-XaAR</code></p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ---------- B. ACHIEVEMENTS ---------- -->
+      <h3 class="subhead reveal">Achievements</h3>
+      <div class="pro-list">
+
+        <article class="card spot pro reveal">
+          <button class="cert-thumb cert-thumb--contain" data-full="assets/certs/sic-semifinal.jpg" data-title="Certificate of Appreciation: Semi Finalist, Samsung Innovation Campus Batch 5" aria-label="View semi-finalist certificate">
+            <img src="assets/certs/sic-semifinal.jpg" alt="Samsung certificate of appreciation, Semi Finalist of Samsung Innovation Campus Batch 5 2023/2024" loading="lazy" />
+            <span class="cert-thumb__zoom">View</span>
+          </button>
+          <div class="pro__body">
+            <span class="badge badge--gold">Achievement</span>
+            <h3>Semi-Finalist, Samsung Innovation Campus Batch 5</h3>
+            <p class="muted">Samsung Electronics Indonesia x Skilvul · 2023/2024</p>
+            <p class="pro__meta"><strong>Issued</strong> 17 Sep 2024 &nbsp;·&nbsp; <strong>Team</strong> 4 students, UPN "Veteran" Jakarta</p>
+            <p>
+              Our team was selected as a semi-finalist for the final project
+              "Air Quality Monitoring Sensing for Healthier People", an IoT and AI solution that reads air quality
+              from sensors and presents it on a web dashboard.
+            </p>
+            <div class="tags">
+              <span>IoT</span><span>ESP32</span>
+              <span><img class="ic ic--color" src="assets/icons/python.svg" alt="" />Python</span>
+              <span><img class="ic ic--color" src="assets/icons/streamlit.svg" alt="" />Streamlit</span>
+            </div>
+            <div class="project__links">
+              <a href="https://dashboard-air-quality-monitor-sic-21.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card spot pro reveal">
+          <button class="cert-thumb cert-thumb--contain" data-full="assets/certs/elpt.jpg" data-title="ELPT-UPNVJ result: 497, Upper Intermediate" aria-label="View ELPT result">
+            <img src="assets/certs/elpt.jpg" alt="English Language Proficiency Test result, score 497, Upper Intermediate" loading="lazy" />
+            <span class="cert-thumb__zoom">View</span>
+          </button>
+          <div class="pro__body">
+            <span class="badge badge--gold">Test Result</span>
+            <h3>English Language Proficiency Test (ELPT)</h3>
+            <p class="muted">UPA Bahasa, UPN "Veteran" Jakarta · Prediction test (PBT)</p>
+            <p class="pro__meta"><strong>Score</strong> 497 &nbsp;·&nbsp; <strong>Level</strong> Upper Intermediate &nbsp;·&nbsp; <strong>Test date</strong> 14 Feb 2026</p>
+            <p class="pro__label">Breakdown</p>
+            <div class="tags">
+              <span>Listening 53</span><span>Structure &amp; Written Expressions 46</span><span>Reading Comprehension 50</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ---------- C. OTHER CERTIFICATES ---------- -->
+      <h3 class="subhead reveal">Other Certificates &amp; Training</h3>
+      <div class="filters reveal" role="group" aria-label="Filter certificates">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="data">Data &amp; Analytics</button>
+        <button class="chip" data-filter="ml">AI, ML &amp; IoT</button>
+        <button class="chip" data-filter="career">Career &amp; Employability</button>
+      </div>
+
+      <!--
+        TAMBAH SERTIFIKAT BARU: copy satu blok <article> di bawah, paste di akhir daftar.
+        1) simpan gambarnya di assets/certs/ (JPG),  2) ganti nama file, judul, penerbit, tanggal
+        3) data-cat boleh lebih dari satu, contoh: data-cat="data ml"  (pilihan: data, ml, career)
+      -->
+      <div class="grid grid--3" id="certGrid">
+
+        <article class="card spot cert-card reveal" data-cat="data">
+          <button class="cert-thumb" data-full="assets/certs/dqlab-python.jpg" data-title="DQLab: Introduction to Data Science with Python" aria-label="View certificate">
+            <img src="assets/certs/dqlab-python.jpg" alt="DQLab certificate, Introduction to Data Science with Python" loading="lazy" /><span class="cert-thumb__zoom">View</span>
+          </button>
+          <span class="badge">Data</span>
+          <h3>Introduction to Data Science with Python</h3>
+          <p class="muted">DQLab · 23 Sep 2024</p>
+        </article>
+
+        <article class="card spot cert-card reveal" data-cat="data">
+          <button class="cert-thumb" data-full="assets/certs/dicoding-sql.jpg" data-title="Dicoding: Belajar Dasar Structured Query Language (SQL)" aria-label="View certificate">
+            <img src="assets/certs/dicoding-sql.jpg" alt="Dicoding certificate, Belajar Dasar Structured Query Language (SQL)" loading="lazy" /><span class="cert-thumb__zoom">View</span>
+          </button>
+          <span class="badge">Data</span>
+          <h3>Belajar Dasar Structured Query Language (SQL)</h3>
+          <p class="muted">Dicoding Indonesia · 20 Sep 2024</p>
+          <a class="cert-verify" href="https://www.dicoding.com/certificates/EYX4VDE5JZDL" target="_blank" rel="noopener">Verify →</a>
+        </article>
+
+        <article class="card spot cert-card reveal" data-cat="data">
+          <button class="cert-thumb" data-full="assets/certs/dicoding-visualisasi.jpg" data-title="Dicoding: Belajar Dasar Visualisasi Data" aria-label="View certificate">
+            <img src="assets/certs/dicoding-visualisasi.jpg" alt="Dicoding certificate, Belajar Dasar Visualisasi Data" loading="lazy" /><span class="cert-thumb__zoom">View</span>
+          </button>
+          <span class="badge">Data</span>
+          <h3>Belajar Dasar Visualisasi Data</h3>
+          <p class="muted">Dicoding Indonesia · 14 Mar 2024 · 16 hours</p>
+          <a class="cert-verify" href="https://www.dicoding.com/certificates/NVP77RKNGPR0" target="_blank" rel="noopener">Verify →</a>
+        </article>
+
+        <article class="card spot cert-card reveal" data-cat="data">
+          <button class="cert-thumb" data-full="assets/certs/myskill-sql.jpg" data-title="MySkill x Deloitte: Data Analysis, Introduction to SQL" aria-label="View certificate">
+            <img src="assets/certs/myskill-sql.jpg" alt="MySkill x Deloitte certificate, Data Analysis Introduction to SQL" loading="lazy" /><span class="cert-thumb__zoom">View</span>
+          </button>
+          <span class="badge">Data</span>
+          <h3>Data Analysis: Introduction to SQL</h3>
+          <p class="muted">MySkill x Deloitte · Free Intensive Bootcamp · 22 Feb 2024</p>
+        </article>
+
+        <article class="card spot cert-card reveal" data-cat="data">
+          <button class="cert-thumb" data-full="assets/certs/adse-sap.jpg" data-title="ASEAN Data Science Explorers 2024: SAP Analytics Cloud and SAP Build Apps" aria-label="View certificate">
+            <img src="assets/certs/adse-sap.jpg" alt="ASEAN Data Science Explorers 2024 certificate of participation" loading="lazy" /><span class="cert-thumb__zoom">View</span>
+          </button>
+          <span class="badge">Data</span>
+          <h3>ASEAN Data Science Explorers 2024</h3>
+          <p class="muted">SAP, ASEAN Foundation, Dampak Sosial Indonesia · SAP Analytics Cloud and SAP Build Apps, 260 min</p>
+        </article>
+
+        <article class="card spot cert-card reveal" data-cat="data ml">
+          <button class="cert-thumb" data-full="assets/certs/ibm-granite.jpg" data-title="IBM SkillsBuild: Data Classification and Summarization Using IBM Granite" aria-label="View certificate">
+            <img src="assets/certs/ibm-granite.jpg" alt="IBM SkillsBuild certificate, Data Classification and Summarization Using IBM Granite" loading="lazy" /><span class="cert-thumb__zoom">View</span>
+          </button>
+          <span class="badge">Data · AI</span>
+          <h3>Data Classification and Summarization Using IBM Granite</h3>
+          <p class="muted">IBM SkillsBuild · 25 Aug 2025</p>
+          <a class="cert-verify" href="https://www.credly.com/badges/f99770b3-c84d-4f4d-bbfe-40707010240e" target="_blank" rel="noopener">Verify on Credly →</a>
+        </article>
+
+        <article class="card spot cert-card reveal" data-cat="ml">
+          <button class="cert-thumb" data-full="assets/certs/dicoding-ml.jpg" data-title="Dicoding: Belajar Machine Learning untuk Pemula" aria-label="View certificate">
+            <img src="assets/certs/dicoding-ml.jpg" alt="Dicoding certificate, Belajar Machine Learning untuk Pemula" loading="lazy" /><span class="cert-thumb__zoom">View</span>
+          </button>
+          <span class="badge">AI · ML</span>
+          <h3>Belajar Machine Learning untuk Pemula</h3>
+          <p class="muted">Dicoding Indonesia · 23 Jun 2024 · 30 hours</p>
+          <a class="cert-verify" href="https://www.dicoding.com/certificates/98XWL0280ZM3" target="_blank" rel="noopener">Verify →</a>
+        </article>
+
+        <article class="card spot cert-card reveal" data-cat="ml">
+          <button class="cert-thumb cert-thumb--portrait" data-full="assets/certs/sic-stage1.jpg" data-title="Samsung Innovation Campus Batch 5: Stage 1, Coding and Programming" aria-label="View certificate">
+            <img src="assets/certs/sic-stage1.jpg" alt="Samsung Innovation Campus certificate, Stage 1 Coding and Programming" loading="lazy" /><span class="cert-thumb__zoom">View</span>
+          </button>
+          <span class="badge">Samsung Innovation Campus</span>
+          <h3>Stage 1: Coding and Programming</h3>
+          <p class="muted">Samsung Innovation Campus Batch 5 · 2 to 24 Mar 2024</p>
+        </article>
+
+        <article class="card spot cert-card reveal" data-cat="ml">
+          <button class="cert-thumb cert-thumb--portrait" data-full="assets/certs/sic-stage2.jpg" data-title="Samsung Innovation Campus Batch 5: Stage 2, Internet of Things" aria-label="View certificate">
+            <img src="assets/certs/sic-stage2.jpg" alt="Samsung Innovation Campus certificate, Stage 2 Internet of Things" loading="lazy" /><span class="cert-thumb__zoom">View</span>
+          </button>
+          <span class="badge">Samsung Innovation Campus</span>
+          <h3>Stage 2: Internet of Things (IoT)</h3>
+          <p class="muted">Samsung Innovation Campus Batch 5 · 20 to 27 Apr 2024</p>
+        </article>
+
+        <article class="card spot cert-card reveal" data-cat="ml">
+          <button class="cert-thumb cert-thumb--portrait" data-full="assets/certs/sic-stage3.jpg" data-title="Samsung Innovation Campus Batch 5: Stage 3, Artificial Intelligence" aria-label="View certificate">
+            <img src="assets/certs/sic-stage3.jpg" alt="Samsung Innovation Campus certificate, Stage 3 Artificial Intelligence" loading="lazy" /><span class="cert-thumb__zoom">View</span>
+          </button>
+          <span class="badge">Samsung Innovation Campus</span>
+          <h3>Stage 3: Artificial Intelligence (AI)</h3>
+          <p class="muted">Samsung Innovation Campus Batch 5 · 18 May to 27 Jul 2024</p>
+        </article>
+
+        <article class="card spot cert-card reveal" data-cat="career">
+          <button class="cert-thumb" data-full="assets/certs/wadhwani-core.jpg" data-title="Wadhwani Foundation: 21st Century Core Employability Skills Program" aria-label="View certificate">
+            <img src="assets/certs/wadhwani-core.jpg" alt="Wadhwani Foundation certificate, Core Employability Skills" loading="lazy" /><span class="cert-thumb__zoom">View</span>
+          </button>
+          <span class="badge">Career</span>
+          <h3>21st Century Core Employability Skills</h3>
+          <p class="muted">Wadhwani Foundation · 30 May 2023</p>
+        </article>
+
+        <article class="card spot cert-card reveal" data-cat="career">
+          <button class="cert-thumb" data-full="assets/certs/wadhwani-intermediate.jpg" data-title="Wadhwani Foundation: 21st Century Employability Skills, Intermediate" aria-label="View certificate">
+            <img src="assets/certs/wadhwani-intermediate.jpg" alt="Wadhwani Foundation certificate, Employability Skills Intermediate" loading="lazy" /><span class="cert-thumb__zoom">View</span>
+          </button>
+          <span class="badge">Career</span>
+          <h3>21st Century Employability Skills: Intermediate</h3>
+          <p class="muted">Wadhwani Foundation · 6 Feb 2024</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Lightbox: tampil saat gambar (sertifikat / foto) diklik -->
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox__close" id="lightboxClose" aria-label="Close">✕</button>
+      <figure class="lightbox__box">
+        <img id="lightboxImg" src="" alt="" />
+        <figcaption id="lightboxCap"></figcaption>
+      </figure>
+    </div>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="contact card reveal">
+        <p class="eyebrow">07 / Contact</p>
+        <h2>Let's work together</h2>
+        <p class="muted">I'm open to internship and entry-level opportunities in data analytics. Feel free to reach out.</p>
+        <div class="contact__links">
+          <a href="mailto:salwanagot7@gmail.com" class="btn btn--primary">salwanagot7@gmail.com</a>
+          <a href="https://linkedin.com/in/salwanafisa22" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn</a>
+          <a href="https://github.com/Salwajysn" target="_blank" rel="noopener" class="btn btn--ghost">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Salwa Nafisa. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
