@@ -155,7 +155,7 @@
           <div class="tags">
             <span><img class="ic ic--color" src="assets/icons/python.svg" alt="" />Python</span>
             <span>Classification</span><span>Model Evaluation</span>
-            <span><img class="ic" src="assets/icons/flask.svg" alt="" />Flask Deployment</span>
+            <span><img class="ic ic--color" src="assets/icons/flask.svg" alt="" />Flask Deployment</span>
           </div>
         </article>
         <article class="card spot reveal">
@@ -217,23 +217,25 @@
         <article class="card spot project reveal">
           <div class="proj-thumb">
             <span class="proj-thumb__ph"><img class="ic" src="assets/icons/ui/image.svg" alt="" />Preview coming soon</span>
-            <!-- Taruh screenshot SNT-Guard di assets/projects/snt-guard.jpg -->
-            <img src="assets/projects/snt-guard.jpg" alt="SNT-Guard web app preview" loading="lazy" onerror="this.remove()" />
+            <img src="assets/projects/snt-guard.jpg" alt="SNT-Guard web app: model comparison page and classification dashboard" loading="lazy" onerror="this.remove()" />
           </div>
           <span class="project__label">Thesis · Data / ML</span>
           <h3>SNT-Guard: DDoS Attack Classification</h3>
           <p>
-            Compared several machine learning models to classify DDoS attacks, covering data preprocessing,
-            model evaluation, and deployment as a Flask web application.
+            Compared four machine learning models to detect DDoS traffic, chose the best one with a weighted
+            scoring method, and shipped it as a Flask web app (XGBoost, 99.91% accuracy).
           </p>
           <div class="tags">
             <span><img class="ic ic--color" src="assets/icons/python.svg" alt="" />Python</span>
             <span>Machine Learning</span>
-            <span><img class="ic" src="assets/icons/flask.svg" alt="" />Flask</span>
+            <span><img class="ic ic--color" src="assets/icons/flask.svg" alt="" />Flask</span>
           </div>
           <div class="project__links">
-            <!-- Ganti # dengan link GitHub / demo kamu -->
-            <a href="#" target="_blank" rel="noopener">GitHub →</a>
+            <!-- Tombol ini membuka card detail (<dialog id="modal-sntguard"> di bawah) -->
+            <button class="project__more" data-modal="modal-sntguard" aria-haspopup="dialog">Read more →</button>
+            <!-- Kalau repo GitHub SNT-Guard sudah ada, hapus tanda komentar dan isi link-nya:
+            <a href="https://github.com/USERNAME/REPO" target="_blank" rel="noopener">GitHub →</a>
+            -->
           </div>
         </article>
 
@@ -468,7 +470,7 @@
       </div>
       <div class="grid grid--3">
         <article class="card spot reveal">
-          <div class="card__icon"><img class="ic ic--lg" src="assets/icons/ui/users.svg" alt="" /></div>
+          <img class="com__logo" src="assets/communities/novo-club.png" alt="Novo Club by ParagonCorp logo" />
           <span class="timeline__date">Feb 2024 to Dec 2024</span>
           <h3>Novo Club by ParagonCorp</h3>
           <p class="muted">Member (ParaNovo)</p>
@@ -478,7 +480,7 @@
           </p>
         </article>
         <article class="card spot reveal">
-          <div class="card__icon"><img class="ic ic--lg" src="assets/icons/ui/users.svg" alt="" /></div>
+          <img class="com__logo" src="assets/communities/pemimpin-id.png" alt="Pemimpin.id logo" />
           <h3>Pemimpin.id Community</h3>
           <p class="muted">Community member</p>
           <p class="com__text">
@@ -487,7 +489,7 @@
           </p>
         </article>
         <article class="card spot reveal">
-          <div class="card__icon"><img class="ic ic--lg" src="assets/icons/ui/users.svg" alt="" /></div>
+          <img class="com__logo com__logo--round" src="assets/communities/young-on-top.jpg" alt="Young On Top logo" />
           <h3>Young On Top</h3>
           <p class="muted">Community member · Green &amp; Social pillars</p>
           <p class="com__text">
@@ -733,6 +735,138 @@
         <figcaption id="lightboxCap"></figcaption>
       </figure>
     </div>
+
+    <!--
+      CARD DETAIL PROJECT (muncul saat tombol "Read more" diklik).
+      Untuk project lain: copy blok <dialog> ini, ganti id-nya, lalu beri tombol
+      <button class="project__more" data-modal="ID-DIALOG">Read more →</button> di card project-nya.
+    -->
+    <dialog class="modal" id="modal-sntguard" aria-labelledby="sntTitle">
+      <header class="modal__head">
+        <button class="modal__close" data-close aria-label="Close">✕</button>
+        <span class="project__label">Undergraduate thesis · Data / ML</span>
+        <h3 id="sntTitle">SNT-Guard: DDoS Attack Classification Web App</h3>
+        <p class="muted">
+          Implementation of a web-based DDoS classification system with machine learning model comparison.
+          Informatics, UPN "Veteran" Jakarta, 2026.
+        </p>
+      </header>
+
+      <div class="modal__body">
+        <ul class="stats">
+          <li><strong>1,034,668</strong><span>network flow records in the dataset</span></li>
+          <li><strong>99.91%</strong><span>accuracy of the best model, XGBoost</span></li>
+          <li><strong>21 / 21</strong><span>black-box test scenarios passed</span></li>
+          <li><strong>3.3 s</strong><span>to classify 1,000,000 rows</span></li>
+        </ul>
+
+        <div class="shots">
+          <figure>
+            <a href="assets/projects/snt-guard-dashboard.jpg" target="_blank" rel="noopener">
+              <img src="assets/projects/snt-guard-dashboard.jpg" alt="SNT-Guard classification dashboard: upload a CSV and see a summary of normal and DDoS flows" loading="lazy" />
+            </a>
+            <figcaption>Classification dashboard: upload a CSV, get the Normal vs DDoS summary</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/projects/snt-guard-models.jpg" target="_blank" rel="noopener">
+              <img src="assets/projects/snt-guard-models.jpg" alt="SNT-Guard model comparison page with evaluation metrics and training time per model" loading="lazy" />
+            </a>
+            <figcaption>Model comparison page: metrics and training time per model</figcaption>
+          </figure>
+        </div>
+
+        <h4>The problem</h4>
+        <p>
+          A DDoS attack floods a network or server with traffic from many sources until a service slows down or
+          goes offline. Cloudflare reported 47.1 million DDoS attacks in 2025, 121% more than the year before,
+          so checking traffic by hand is not realistic. SNT-Guard is a local web app where you upload
+          network-flow data as a CSV and see which flows are normal and which are DDoS.
+        </p>
+
+        <h4>How I built it</h4>
+        <ol class="steps">
+          <li>
+            <strong>Data.</strong> The SNT dataset (simulated SDN traffic from Mininet and Ryu) has 1,034,668 rows and
+            22 columns, with no missing, infinite, or duplicate rows. I removed four identity columns
+            (<code>timestamp</code>, <code>flow_id</code>, <code>ip_src</code>, <code>ip_dst</code>) so models learn from
+            traffic behavior, leaving 17 numeric features.
+          </li>
+          <li>
+            <strong>A fair split.</strong> Rows with identical feature patterns were grouped, then split with
+            StratifiedGroupKFold so the same pattern never lands in both training and test data. This reduces
+            pattern leakage, which can make results look better than they are (828,218 training and 206,450 test rows).
+          </li>
+          <li>
+            <strong>Four models, one setup.</strong> Logistic Regression, Decision Tree, Random Forest, and XGBoost were
+            trained on identical data and evaluated with accuracy, precision, recall, F1-score, confusion matrix,
+            ROC-AUC, and grouped cross-validation.
+          </li>
+          <li>
+            <strong>Picking the winner.</strong> A Weighted Sum Method scored each model on accuracy (70%) and training
+            time (30%). XGBoost ranked first with a score of 0.9547.
+          </li>
+          <li>
+            <strong>A leaner model.</strong> Feature importance across all models, checked for stability over five folds,
+            narrowed 17 features to six: <code>packet_count</code>, <code>tp_dst</code>, <code>icmp_type</code>,
+            <code>icmp_code</code>, <code>flow_duration_sec</code>, and <code>ip_proto</code>. In cross-validation the
+            six-feature XGBoost beat the 17-feature one (accuracy 99.85% vs 98.33%, 37 vs 15,049 missed attacks)
+            and trained faster.
+          </li>
+          <li>
+            <strong>Shipping it.</strong> The final model was retrained on all data and integrated into a Flask app.
+          </li>
+        </ol>
+
+        <h4>Model comparison</h4>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr><th>Model</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1-score</th><th>Train time</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Logistic Regression</td><td>99.2245%</td><td>98.7342%</td><td>99.6894%</td><td>99.2095%</td><td>1.51 s</td></tr>
+              <tr><td>Decision Tree</td><td>99.6454%</td><td>99.8366%</td><td>99.4364%</td><td>99.6361%</td><td>3.12 s</td></tr>
+              <tr><td>Random Forest</td><td>99.7646%</td><td>99.8271%</td><td>99.6904%</td><td>99.7587%</td><td>18.48 s</td></tr>
+              <tr class="best"><td>XGBoost</td><td>99.9104%</td><td>99.8187%</td><td>99.9980%</td><td>99.9083%</td><td>4.07 s</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">
+          Results on 206,450 test rows. XGBoost missed only 2 attack flows (Decision Tree missed 568, Random Forest 312),
+          which matters because an attack classified as normal is the costlier mistake.
+        </p>
+
+        <h4>What the app does</h4>
+        <ul class="checks">
+          <li>Validates an uploaded CSV for structure and required features</li>
+          <li>Classifies every flow as Normal or DDoS with a DDoS probability</li>
+          <li>Shows counts and percentages, a distribution chart, and a per-row detail table</li>
+          <li>Keeps classification history in SQLite, so it survives a restart</li>
+          <li>Exports Excel and PDF reports</li>
+          <li>Includes model comparison and feature importance pages</li>
+        </ul>
+
+        <h4>Testing</h4>
+        <p>
+          Three external testers ran 21 black-box scenarios (valid and invalid input, classification, results,
+          reports, history) and every one passed. In a performance test from 1,000 to 1,000,000 rows, total processing
+          time grew from 0.07 s to 3.31 s on a single local machine.
+        </p>
+
+        <h4>Limitations and next steps</h4>
+        <p>
+          The dataset comes from simulated SDN traffic rather than production networks, and performance was tested with
+          one user at a time. Next steps are real traffic data, multi-class attack types, and SDN controller integration
+          for real-time classification.
+        </p>
+
+        <div class="tags">
+          <span><img class="ic ic--color" src="assets/icons/python.svg" alt="" />Python</span>
+          <span><img class="ic ic--color" src="assets/icons/flask.svg" alt="" />Flask</span>
+          <span>XGBoost</span><span>SQLite</span><span>Machine Learning</span><span>Data Preprocessing</span>
+        </div>
+      </div>
+    </dialog>
 
     <!-- ============ CONTACT ============ -->
     <section class="section" id="contact">

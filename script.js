@@ -164,3 +164,23 @@ themeBtn.addEventListener("click", () => {
   applyTheme(next);
   try { localStorage.setItem("theme", next); } catch (e) {}
 });
+
+// 11) Card detail project (<dialog>): buka dengan tombol [data-modal], tutup dengan ✕, klik latar, atau Esc
+document.querySelectorAll("[data-modal]").forEach((btn) => {
+  const dlg = document.getElementById(btn.dataset.modal);
+  if (!dlg) return;
+  btn.addEventListener("click", () => {
+    if (typeof dlg.showModal === "function") dlg.showModal();
+    else dlg.setAttribute("open", "");
+    document.body.style.overflow = "hidden";
+    const body = dlg.querySelector(".modal__body");
+    if (body) body.scrollTop = 0;
+  });
+  dlg.addEventListener("click", (e) => {
+    if (e.target === dlg || e.target.closest("[data-close]")) dlg.close();
+  });
+  dlg.addEventListener("close", () => {
+    document.body.style.overflow = "";
+    btn.focus();
+  });
+});
